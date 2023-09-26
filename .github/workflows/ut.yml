@@ -1,0 +1,56 @@
+name: DPLC's Algorithm Engineering python test
+on:
+  push:
+  pull_request:
+
+jobs:
+  build-linux:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+    - name: Update base environment
+      run: |
+        source $CONDA/bin/activate
+        $CONDA/bin/conda update -n base -c defaults conda
+    - name: Install dplc sample code.
+      run: |
+        source $CONDA/bin/activate
+        $CONDA/bin/conda install setuptools
+        $CONDA/bin/conda install pip
+        $CONDA/bin/conda
+        python3 setup.py install
+
+    - name: Test YuzhiZhang's codes.
+      run: |
+        source $CONDA/bin/activate
+        cd tests
+        pytest test_YuzhiZhang.py -v -n auto
+
+    - name: Test MaohuaYang's codes.
+      run: |
+        source $CONDA/bin/activate
+        cd tests
+        pytest test_MaohuaYang.py -v -n auto
+
+    - name: Test Yannan Yuan's codes.
+      run: |
+        source $CONDA/bin/activate
+        cd tests
+        pytest test_YannanYuan.py -v -n auto
+
+    - name: Test YiboWang's codes.
+      run: |
+        source $CONDA/bin/activate
+        cd tests
+        pytest test_YiboWang.py -v -n auto
+
+    - name: Test YuhangWang's codes.
+      run: |
+        source $CONDA/bin/activate
+        cd tests
+        pytest test_YuhangWang.py -v -n auto
