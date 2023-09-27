@@ -8,3 +8,4 @@ https://dptechnology.feishu.cn/wiki/wikcn3Qu95x0ItmltztkIvgDEec#
 3. Yannan Yuan
 4. Yibo Wang
 5. Yuhang Wang
+6. Qiangqiang Gu
