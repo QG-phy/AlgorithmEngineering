@@ -13,7 +13,7 @@ class TestVerifyMottoZixiGan(unittest.TestCase):
 
     def test_verifyMottoZixigan_wrong(self):
         wrong_motto = "As We Can"
-        self.assertEqual(verifyMottoZixiGan, False)
+        self.assertEqual(verifyMottoZixiGan(wrong_motto), False)
 
     @classmethod
     def tearDownClass(self):
