@@ -54,3 +54,9 @@ jobs:
         source $CONDA/bin/activate
         cd tests
         pytest test_YuhangWang.py -v -n auto
+
+    - name: Test ZixiGan's codes.
+      run: |
+        source $CONDA/bin/activate
+        cd tests
+        pytest test_ZixiGan.py -v -n auto

@@ -149,3 +149,25 @@ def verifyMottoYuhangWang(public_string: str) -> bool:
     False: otherwise.
     '''
     return md5_encoding(public_string) == "48c9598399fca3a74a1f73a641651a25"
+
+
+def verifyMottoZixiGan(public_string: str) -> bool:
+    '''
+
+    Verify if a public string is Zixi Gan's motto.
+
+    Parameters:
+    ---------
+    public_string: string, a public string from user input.
+
+    Returns:
+    -------
+    True: if the string matches with Zixi Gan's motto.
+    False: otherwise.
+    '''
+    
+    in_md5 = md5_encoding(public_string)
+    if in_md5 == "083ecbdb5e5f1fc25aefb501f9b6c6e1":
+        return True
+    else:
+        return False
