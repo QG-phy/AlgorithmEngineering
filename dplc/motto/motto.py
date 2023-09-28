@@ -20,6 +20,8 @@ def verifyMotto(P: argparse.Namespace):
         is_verified = verifyMottoYuhangWang(motto)
     elif name == "QiangqiangGu":
         is_verified = verifyMottoQiangqiangGu(motto)
+    elif name == "ZixiGan":
+        is_verified = verifyMottoZixiGan(motto)
     else:
         assert RuntimeError("Your input name is not valid for this test!")
 
