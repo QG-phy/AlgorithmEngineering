@@ -55,14 +55,26 @@ jobs:
         cd tests
         pytest test_YuhangWang.py -v -n auto
 
+    - name: Test JijieZou's codes.
+      run: |
+        source $CONDA/bin/activate
+        cd tests
+        pytest test_JijieZou.py -v -n auto
     - name: Test QiangqiangGu's codes.
       run: |
         source $CONDA/bin/activate
         cd tests
         pytest test_QiangqiangGu.py -v -n auto
-
+        
     - name: Test ZYZH's codes.
       run: |
         source $CONDA/bin/activate
         cd tests
         pytest test_ZYZH.py -v -n auto
+        
+        
+    - name: Test ZixiGan's codes.
+      run: |
+        source $CONDA/bin/activate
+        cd tests
+        pytest test_ZixiGan.py -v -n auto
