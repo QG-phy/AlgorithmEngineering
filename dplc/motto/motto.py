@@ -173,3 +173,25 @@ def verifyMottoQiangqiangGu(public_string: str) -> bool:
     if md5_string == "48f3cb54333cbceda32156f4f2a7dd33":
         is_verified = True
     return is_verified
+
+  
+def verifyMottoZixiGan(public_string: str) -> bool:
+    '''
+
+    Verify if a public string is Zixi Gan's motto.
+
+    Parameters:
+    ---------
+    public_string: string, a public string from user input.
+
+    Returns:
+    -------
+    True: if the string matches with Zixi Gan's motto.
+    False: otherwise.
+    '''
+    
+    in_md5 = md5_encoding(public_string)
+    if in_md5 == "083ecbdb5e5f1fc25aefb501f9b6c6e1":
+        return True
+    else:
+        return False
