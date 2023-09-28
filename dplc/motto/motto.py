@@ -5,7 +5,7 @@ from dplc.utils import md5_encoding
 def verifyMotto(P: argparse.Namespace):
     name = P.name
     motto = P.motto
-    is_verified = True
+    is_verified = False
     if name == "DPTechnology":
         is_verified = verifyMottoDPTechnology(motto)
     elif name == "YuzhiZhang":
