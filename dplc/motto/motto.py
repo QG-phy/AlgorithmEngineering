@@ -177,10 +177,11 @@ def verifyMottoQiangqiangGu(public_string: str) -> bool:
         is_verified = True
     return is_verified
 
-def verifyMottoJijieZou(public_string: str) -> bool:
+  
+def verifyMottoZixiGan(public_string: str) -> bool:
     '''
 
-    Verify if a public string is Jijie Zou's motto.
+    Verify if a public string is Zixi Gan's motto.
 
     Parameters:
     ---------
@@ -188,12 +189,33 @@ def verifyMottoJijieZou(public_string: str) -> bool:
 
     Returns:
     -------
-    Verify if a public string is Jijie Zou's motto.
-    is_verified: bool, if the string matches with Jijie Zou's motto,
-        return True.
+    True: if the string matches with Zixi Gan's motto.
+    False: otherwise.
     '''
-    md5_string = md5_encoding(public_string)
-    is_verified = False
-    if md5_string == "fef14ee8266b9bafce64579da7066385":
-        is_verified = True
-    return is_verified
+    
+    in_md5 = md5_encoding(public_string)
+    if in_md5 == "083ecbdb5e5f1fc25aefb501f9b6c6e1":
+        return True
+    else:
+        return False
+
+def verifyMottoJijieZou(public_string: str) -> bool:
+    '''
+
+    Verify if a public string is JijieZou's motto.
+
+    Parameters:
+    ---------
+    public_string: string, a public string from user input.
+
+    Returns:
+    -------
+    True: if the string matches with JijieZou's motto.
+    False: otherwise.
+    '''
+    
+    in_md5 = md5_encoding(public_string)
+    if in_md5 == "fef14ee8266b9bafce64579da7066385":
+        return True
+    else:
+        return False
