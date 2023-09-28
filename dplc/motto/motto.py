@@ -21,7 +21,7 @@ def verifyMotto(P: argparse.Namespace):
     elif name == "QiangqiangGu":
         is_verified = verifyMottoQiangqiangGu(motto)
     elif name == "ZheyuanHu":
-        is_verified = verifyMottoQiangqiangGu(motto)
+        is_verified = verifyMottoZheyuanHu(motto)
     else:
         assert RuntimeError("Your input name is not valid for this test!")
 
@@ -179,7 +179,7 @@ def verifyMottoQiangqiangGu(public_string: str) -> bool:
 def verifyMottoZheyuanHu(public_string: str) -> bool:
     '''
 
-    Verify if a public string is Qiangqiang Gu's motto.
+    Verify if a public string is Zheyuan Hu's motto.
 
     Parameters:
     ---------
@@ -187,8 +187,8 @@ def verifyMottoZheyuanHu(public_string: str) -> bool:
 
     Returns:
     -------
-    Verify if a public string is Qiangqiang Gu's motto.
-    is_verified: bool, if the string matches with Qiangqiang Gu's motto,
+    Verify if a public string is Zheyuan Hu's motto.
+    is_verified: bool, if the string matches with Zheyuan Hu's motto,
         return True.
     '''
     md5_string = md5_encoding(public_string)
