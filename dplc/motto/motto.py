@@ -54,7 +54,7 @@ def verifyMottoDPTechnology(public_string: str) -> bool:
 def verifyMottoZYZH(public_string: str) -> bool:
     '''
 
-    Verify if a public string is Yuzhi Zhang's motto.
+    Verify if a public string is ZYZH's motto.
 
     Parameters:
     ---------
@@ -62,7 +62,7 @@ def verifyMottoZYZH(public_string: str) -> bool:
 
     Returns:
     -------
-    is_verified: bool, if the string matches with Yuzhi Zhang's motto,
+    is_verified: bool, if the string matches with ZYZH's motto,
         return True.
     '''
     md5_string = md5_encoding(public_string)
