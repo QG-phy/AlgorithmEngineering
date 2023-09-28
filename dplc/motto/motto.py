@@ -22,6 +22,8 @@ def verifyMotto(P: argparse.Namespace):
         is_verified = verifyMottoJijieZou(motto)
     elif name == "QiangqiangGu":
         is_verified = verifyMottoQiangqiangGu(motto)
+    elif name == "ZixiGan":
+        is_verified = verifyMottoZixiGan(motto)
     elif name == "ZYZH":
         is_verified = verifyMottoZYZH(motto)
     else:
