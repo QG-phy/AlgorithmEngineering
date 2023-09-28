@@ -20,6 +20,8 @@ def verifyMotto(P: argparse.Namespace):
         is_verified = verifyMottoYuhangWang(motto)
     elif name == "JijieZou":
         is_verified = verifyMottoJijieZou(motto)
+    elif name == "QiangqiangGu":
+        is_verified = verifyMottoQiangqiangGu(motto)
     else:
         assert RuntimeError("Your input name is not valid for this test!")
 
@@ -152,10 +154,11 @@ def verifyMottoYuhangWang(public_string: str) -> bool:
     '''
     return md5_encoding(public_string) == "48c9598399fca3a74a1f73a641651a25"
 
-def verifyMottoJijieZou(public_string: str) -> bool:
+
+def verifyMottoQiangqiangGu(public_string: str) -> bool:
     '''
 
-    Verify if a public string is Yuzhi Zhang's motto.
+    Verify if a public string is Qiangqiang Gu's motto.
 
     Parameters:
     ---------
@@ -163,7 +166,30 @@ def verifyMottoJijieZou(public_string: str) -> bool:
 
     Returns:
     -------
-    is_verified: bool, if the string matches with Yuzhi Zhang's motto,
+    Verify if a public string is Qiangqiang Gu's motto.
+    is_verified: bool, if the string matches with Qiangqiang Gu's motto,
+        return True.
+    '''
+    md5_string = md5_encoding(public_string)
+    is_verified = False
+
+    if md5_string == "48f3cb54333cbceda32156f4f2a7dd33":
+        is_verified = True
+    return is_verified
+
+def verifyMottoJijieZou(public_string: str) -> bool:
+    '''
+
+    Verify if a public string is Qiangqiang Gu's motto.
+
+    Parameters:
+    ---------
+    public_string: string, a public string from user input.
+
+    Returns:
+    -------
+    Verify if a public string is Qiangqiang Gu's motto.
+    is_verified: bool, if the string matches with Qiangqiang Gu's motto,
         return True.
     '''
     md5_string = md5_encoding(public_string)
@@ -171,4 +197,3 @@ def verifyMottoJijieZou(public_string: str) -> bool:
     if md5_string == "fef14ee8266b9bafce64579da7066385":
         is_verified = True
     return is_verified
-
