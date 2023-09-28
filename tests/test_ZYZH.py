@@ -8,7 +8,7 @@ class TestVerifyZYZH(unittest.TestCase):
         pass
     
     def test_verifyMottoZYZH_right(self):
-        right_motto = "The dice is cast"
+        right_motto = "The dice is cast."
         self.assertEqual(verifyMottoZYZH(right_motto), True)
         
     def test_verifyMottoZYZH_wrong(self):
