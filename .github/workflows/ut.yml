@@ -60,3 +60,9 @@ jobs:
         source $CONDA/bin/activate
         cd tests
         pytest test_QiangqiangGu.py -v -n auto
+
+    - name: Test ZheyuanHu's codes.
+      run: |
+        source $CONDA/bin/activate
+        cd tests
+        pytest test_ZheyuanHu.py -v -n auto
