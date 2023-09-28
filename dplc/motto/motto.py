@@ -180,7 +180,7 @@ def verifyMottoQiangqiangGu(public_string: str) -> bool:
 def verifyMottoJijieZou(public_string: str) -> bool:
     '''
 
-    Verify if a public string is Qiangqiang Gu's motto.
+    Verify if a public string is Jijie Zou's motto.
 
     Parameters:
     ---------
@@ -188,8 +188,8 @@ def verifyMottoJijieZou(public_string: str) -> bool:
 
     Returns:
     -------
-    Verify if a public string is Qiangqiang Gu's motto.
-    is_verified: bool, if the string matches with Qiangqiang Gu's motto,
+    Verify if a public string is Jijie Zou's motto.
+    is_verified: bool, if the string matches with Jijie Zou's motto,
         return True.
     '''
     md5_string = md5_encoding(public_string)
